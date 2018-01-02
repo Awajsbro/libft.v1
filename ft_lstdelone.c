@@ -6,16 +6,16 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:11:55 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/20 18:11:56 by awajsbro         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:45:24 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_listd **alst)
+void	ft_lstdelone(t_list **alst)
 {
-	t_listd	*prev;
-	t_listd	*next;
+	t_list	*prev;
+	t_list	*next;
 
 	if (alst == NULL)
 		return ;

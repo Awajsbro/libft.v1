@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:10:44 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/20 18:10:47 by awajsbro         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:46:48 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_lstlen(t_listd *lst)
+size_t	ft_lstlen(t_list *lst)
 {
 	size_t	i;
 

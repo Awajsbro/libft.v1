@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:12:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/20 18:12:03 by awajsbro         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:49:19 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_listd	*ft_lstend(t_listd *lst)
+t_list	*ft_lstend(t_list *lst)
 {
 	while (lst->next != NULL)
 		lst = lst->next;

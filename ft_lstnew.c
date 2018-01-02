@@ -6,15 +6,15 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:10:56 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/20 18:10:57 by awajsbro         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:46:48 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_listd	*ft_lstnew(void	const *content, size_t content_size)
+t_list	*ft_lstnew(void	const *content, size_t content_size)
 {
-	t_listd	*new;
+	t_list	*new;
 
 	if (!(new = malloc(sizeof(*new))))
 		return (NULL);

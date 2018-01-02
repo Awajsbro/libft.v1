@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/20 18:04:19 by awajsbro         ###   ########.fr       */
+/*   Updated: 2017/12/21 14:42:54 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,25 +120,25 @@ void			ft_strdel(char **as);
 /*
 **			-----gestion des liste doublement chainee-----
 */
-typedef struct	s_listd
+typedef struct	s_list
 {
 	void			*content;
 	size_t			content_size;
-	struct s_listd	*next;
-	struct s_listd	*prev;
-}				t_listd;
+	struct s_list	*next;
+	struct s_list	*prev;
+}				t_list;
 
-t_listd			*ft_lstnew(void const *content, size_t content_size);
-void			ft_lstaddstart(t_listd **alst, t_listd *new);
-void			ft_lstaddend(t_listd **alst, t_listd *new);
-t_listd			*ft_lststart(t_listd *lst);
-t_listd			*ft_lstend(t_listd *lst);
-t_listd			*ft_lstfindcont(t_listd *lst, void *content);
-t_listd			*ft_lstfindsize(t_listd *lst, size_t size);
-size_t			ft_lstlen(t_listd *lst);
-void			ft_lstiter(t_listd *lst, void (*f)(t_listd *elem));
-t_listd			*ft_lstmap(t_listd *lst, t_listd *(*f)(t_listd *elem));
-void			ft_lstdelone(t_listd **alst);
-void			ft_lstdel(t_listd **alist);
+t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstaddstart(t_list **alst, t_list *new);
+void			ft_lstaddend(t_list **alst, t_list *new);
+t_list			*ft_lststart(t_list *lst);
+t_list			*ft_lstend(t_list *lst);
+t_list			*ft_lstfindcont(t_list *lst, void *content);
+t_list			*ft_lstfindsize(t_list *lst, size_t size);
+size_t			ft_lstlen(t_list *lst);
+void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void			ft_lstdelone(t_list **alst);
+void			ft_lstdel(t_list **alist);
 
 #endif
