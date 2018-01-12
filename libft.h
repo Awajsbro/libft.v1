@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/21 14:42:54 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/01/12 14:26:27 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,7 @@ char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strdup(char const *s1);
+char			*ft_strndup(char const *s1, size_t len);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
@@ -94,6 +95,7 @@ char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_joinfree(char *s1, char *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
 size_t			ft_strclen(char const *s, int c);
@@ -113,8 +115,6 @@ void			ft_strdel(char **as);
 **}				t_pt;
 **
 **t_pt			ft_ptnew(int x, int y, int z);
-**int			ft_columval(int index, lencol);
-**int			ft_ligneval(int index, lencol);
 */
 
 /*
@@ -128,7 +128,7 @@ typedef struct	s_list
 	struct s_list	*prev;
 }				t_list;
 
-t_list			*ft_lstnew(void const *content, size_t content_size);
+t_list			*ft_lstnew(void *content, size_t content_size);
 void			ft_lstaddstart(t_list **alst, t_list *new);
 void			ft_lstaddend(t_list **alst, t_list *new);
 t_list			*ft_lststart(t_list *lst);

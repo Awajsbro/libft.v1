@@ -1,26 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_joinfree.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:10:56 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/12 14:25:00 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/01/06 19:22:12 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/01/12 14:25:18 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content, size_t content_size)
+char	*ft_joinfree(char *s1, char *s2)
 {
-	t_list	*new;
+	char	*n;
+	size_t	i;
+	size_t	j;
 
-	if (!(new = malloc(sizeof(*new))))
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	new->content = content;
-	new->content_size = content_size;
-	new->next = NULL;
-	new->prev = NULL;
-	return (new);
+	i = ft_strlen(s1);
+	j = ft_strlen(s2);
+	if (!(n = (char*)malloc(sizeof(n) * (i + j + 1))))
+		return (NULL);
+	n[i + j] = 0;
+	j = i;
+	i = -1;
+	while (s1[++i] != 0)
+		n[i] = s1[i];
+	i = -1;
+	while (s2[++i] != 0)
+		n[i + j] = s2[i];
+	free(s1);
+	free(s2);
+	return (n);
 }

@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2017/12/20 18:14:25 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/01/06 19:24:50 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRC 	= ft_isascii.c \
 		ft_memccpy.c \
 		ft_memset.c \
 		ft_strdup.c \
+		ft_strndup.c \
 		ft_strncpy.c \
 		ft_toupper.c \
 		ft_memdel.c \
@@ -53,6 +54,7 @@ SRC 	= ft_isascii.c \
 		ft_strnequ.c \
 		ft_strsub.c \
 		ft_strjoin.c \
+		ft_joinfree.c\
 		ft_strtrim.c \
 		ft_strsplit.c \
 		ft_itoa.c \

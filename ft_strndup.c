@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:10:56 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/12 14:25:00 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/01/06 18:54:53 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/01/07 14:27:02 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content, size_t content_size)
+char	*ft_strndup(const char *s1, size_t len)
 {
-	t_list	*new;
+	char	*s2;
+	size_t	i;
 
-	if (!(new = malloc(sizeof(*new))))
+	i = 0;
+	while (s1[i] != 0 && i < len)
+		i++;
+	if (!(s2 = (char*)malloc(sizeof(*s2) * (i + 1))))
 		return (NULL);
-	new->content = content;
-	new->content_size = content_size;
-	new->next = NULL;
-	new->prev = NULL;
-	return (new);
+	s2[i] = 0;
+	i = -1;
+	while (s1[++i] != 0 && i < len)
+		s2[i] = s1[i];
+	return (s2);
 }
