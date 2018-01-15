@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/01/06 19:24:50 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/01/13 16:32:49 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,8 +43,10 @@ SRC 	= ft_isascii.c \
 		ft_toupper.c \
 		ft_memdel.c \
 		ft_strnew.c \
+		ft_strrealloc.c \
 		ft_strdel.c \
 		ft_memalloc.c \
+		ft_realloc.c \
 		ft_strclr.c \
 		ft_striter.c \
 		ft_striteri.c \

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/12 14:26:27 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/01/15 13:51:44 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,7 @@ void			ft_putnbr_fd(int n, int fd);
 **			-----gestion de memoire-----
 */
 void			*ft_memalloc(size_t size);
+void			*ft_realloc(void *s, size_t size);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
@@ -76,6 +77,7 @@ void			ft_memdel(void **ap);
 **			-----gestion de chaine de caractere-----
 */
 char			*ft_strnew(size_t size);
+char			*ft_strrealloc(char *s, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strcpy(char *dst, const char *src);
