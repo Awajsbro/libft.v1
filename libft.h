@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/15 13:51:44 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/01/26 16:47:56 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int				ft_sqrt(int nb);
 int				ft_atoi(char const *str);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-char			*ft_itoa(int n);
+char			*ft_itoa(long n);
+char			*ft_itoab(long n, int b);
 
 /*
 **			-----verification / comparaison-----
