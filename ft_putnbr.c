@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awajsbro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 09:16:54 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/01 11:37:31 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/01/29 15:27:39 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+size_t	ft_putnbr(long long n)
 {
-	ft_putnbr_fd(n, 1);
+	return (ft_putnbr_fd(n, 1));
 }

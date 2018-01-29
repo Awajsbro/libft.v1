@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putendln.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/29 13:57:26 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 15:22:10 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/01/29 15:46:55 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/01/29 15:54:20 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_putstr(char const *str)
+size_t	ft_putendln(char const *s, size_t len)
 {
-	return (ft_putstr_fd(str, 1));
+	return (ft_putendln_fd(s, 1, len));
 }

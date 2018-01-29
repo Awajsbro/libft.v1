@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/26 16:47:56 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/01/29 15:28:29 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,13 +52,17 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 **			-----ecriture / lecture-----
 */
 void			ft_putchar(char c);
-void			ft_putstr(char const *s);
-void			ft_putendl(char const *s);
-void			ft_putnbr(int n);
+size_t			ft_putstr(char const *s);
+size_t			ft_putstrn(char const *s, size_t len);
+size_t			ft_putendl(char const *s);
+size_t			ft_putendln(char const *s, size_t len);
+size_t			ft_putnbr(long long n);
 void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(char const *s, int fd);
-void			ft_putendl_fd(char const *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
+size_t			ft_putstr_fd(char const *s, int fd);
+size_t			ft_putstrn_fd(char const *s, int fd, size_t len);
+size_t			ft_putendl_fd(char const *s, int fd);
+size_t			ft_putendln_fd(char const *s, int fd, size_t len);
+size_t			ft_putnbr_fd(long long n, int fd);
 
 /*
 **			-----gestion de memoire-----
@@ -79,30 +83,30 @@ void			ft_memdel(void **ap);
 */
 char			*ft_strnew(size_t size);
 char			*ft_strrealloc(char *s, size_t len);
-char			*ft_strcat(char *s1, const char *s2);
-char			*ft_strchr(const char *s, int c);
-char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strdup(char const *s1);
 char			*ft_strndup(char const *s1, size_t len);
-size_t			ft_strlcat(char *dst, const char *src, size_t size);
-size_t			ft_strlen(const char *s);
-char			*ft_strncat(char *s1, const char *s2, size_t n);
-char			*ft_strncpy(char *dst, char const *src, size_t len);
-char			*ft_strnstr(const char *haystack, const char *needle, size_t l);
-char			*ft_strrchr(const char *s, int c);
-char			*ft_strstr(const char *haystack, const char *needle);
-void			ft_strclr(char *s);
-void			ft_striter(char *s, void (*f)(char*));
-void			ft_striteri(char *s, void (*f)(unsigned int, char*));
-char			*ft_strmap(char const *s, char (*f)(char));
-char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_joinfree(char *s1, char *s2);
-char			*ft_strtrim(char const *s);
-char			**ft_strsplit(char const *s, char c);
+char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strcpy(char *dst, const char *src);
+char			*ft_strncpy(char *dst, char const *src, size_t len);
+char			*ft_strcat(char *s1, const char *s2);
+char			*ft_strncat(char *s1, const char *s2, size_t n);
+size_t			ft_strlcat(char *dst, const char *src, size_t size);
+size_t			ft_strlen(const char *s);
 size_t			ft_strclen(char const *s, int c);
 size_t			ft_strnlen(const char *s, size_t maxlen);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
+char			*ft_strstr(const char *haystack, const char *needle);
+char			*ft_strnstr(const char *haystack, const char *needle, size_t l);
+char			*ft_strtrim(char const *s);
+char			*ft_strmap(char const *s, char (*f)(char));
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void			ft_striter(char *s, void (*f)(char*));
+void			ft_striteri(char *s, void (*f)(unsigned int, char*));
+char			**ft_strsplit(char const *s, char c);
+void			ft_strclr(char *s);
 void			ft_strdel(char **as);
 
 /*
