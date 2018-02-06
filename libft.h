@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 15:28:29 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/06 11:40:25 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,32 +37,34 @@ char			*ft_itoab(long n, int b);
 /*
 **			-----verification / comparaison-----
 */
-int				ft_isalnum(int c);
-int				ft_isalpha(int c);
-int				ft_isascii(int c);
-int				ft_isdigit(int c);
-int				ft_isprint(int c);
-int				ft_isspace(int c);
+char			ft_isalnum(int c);
+char			ft_isalpha(int c);
+char			ft_isascii(int c);
+char			ft_isdigit(int c);
+char			ft_isprint(int c);
+char			ft_isspace(int c);
+char			ft_strequ(char const *s1, char const *s2);
+char			ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
-int				ft_strequ(char const *s1, char const *s2);
-int				ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /*
 **			-----ecriture / lecture-----
 */
-void			ft_putchar(char c);
+char			ft_putchar(char c);
 size_t			ft_putstr(char const *s);
 size_t			ft_putstrn(char const *s, size_t len);
 size_t			ft_putendl(char const *s);
 size_t			ft_putendln(char const *s, size_t len);
 size_t			ft_putnbr(long long n);
-void			ft_putchar_fd(char c, int fd);
+char			ft_putchar_fd(char c, int fd);
 size_t			ft_putstr_fd(char const *s, int fd);
 size_t			ft_putstrn_fd(char const *s, int fd, size_t len);
 size_t			ft_putendl_fd(char const *s, int fd);
 size_t			ft_putendln_fd(char const *s, int fd, size_t len);
 size_t			ft_putnbr_fd(long long n, int fd);
+int				get_next_line(int fd, char **line);
 
 /*
 **			-----gestion de memoire-----
@@ -73,7 +75,6 @@ void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
-int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			ft_memdel(void **ap);

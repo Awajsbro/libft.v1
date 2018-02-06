@@ -6,13 +6,14 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 09:32:59 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 17:19:00 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/06 11:24:46 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
+	return (ft_isprint(c));
 }

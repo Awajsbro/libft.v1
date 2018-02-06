@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: awajsbro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/28 16:22:38 by awajsbro          #+#    #+#             */
-/*   Updated: 2017/12/06 18:26:49 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/06 11:41:21 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strequ(char const *s1, char const *s2)
+char	ft_strequ(char const *s1, char const *s2)
 {
 	size_t	i;
 

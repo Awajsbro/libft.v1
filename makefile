@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/01/29 15:53:07 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/02/02 17:19:47 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,19 +78,20 @@ SRC 	= ft_isascii.c \
 		ft_power.c \
 		ft_sqrt.c \
 		ft_strclen.c \
+		get_next_line.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
 		ft_lstaddend.c \
 		ft_lstaddstart.c \
+		ft_lstfindcont.c \
+		ft_lstfindsize.c \
 		ft_lstend.c \
 		ft_lstlen.c \
 		ft_lststart.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
 		ft_ptnew.c \
-		ft_lstfindcont.c \
-		ft_lstfindsize.c \
 
 OBJ = $(SRC:.c=.o)
 
