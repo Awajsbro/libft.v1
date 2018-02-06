@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 13:55:01 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/06 11:24:54 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/06 14:37:51 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 char	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (ft_isprint(c));
+	return (1);
 }
