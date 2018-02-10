@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/06 11:40:25 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/08 19:41:50 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,14 @@ size_t			ft_putstrn(char const *s, size_t len);
 size_t			ft_putendl(char const *s);
 size_t			ft_putendln(char const *s, size_t len);
 size_t			ft_putnbr(long long n);
+size_t			ft_putnbrb(long long n, char b);
 char			ft_putchar_fd(char c, int fd);
 size_t			ft_putstr_fd(char const *s, int fd);
 size_t			ft_putstrn_fd(char const *s, int fd, size_t len);
 size_t			ft_putendl_fd(char const *s, int fd);
 size_t			ft_putendln_fd(char const *s, int fd, size_t len);
 size_t			ft_putnbr_fd(long long n, int fd);
+size_t			ft_putnbrb_fd(long long n, int fd, char b);
 int				get_next_line(int fd, char **line);
 
 /*

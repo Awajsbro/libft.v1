@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_putnbrb.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/06 18:54:53 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/06 16:14:48 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/02/08 19:19:24 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/02/10 13:59:08 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s1, size_t len)
+size_t	ft_putnbrb(long long n, char b)
 {
-	char	*s2;
-
-	len = ft_strnlen(s1, len);
-	s2 = ft_strnew(len);
-	s2[len] = s1[len];
-	while (len-- != 0)
-		s2[len] = s1[len];
-	return (s2);
+    return (ft_putnbrb_fd(n, 1, b));
 }

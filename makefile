@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/02/02 17:19:47 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/02/08 19:42:34 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,12 +67,14 @@ SRC 	= ft_isascii.c \
 		ft_putendl.c \
 		ft_putendln.c \
 		ft_putnbr.c \
+		ft_putnbrb.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putstrn_fd.c \
 		ft_putendl_fd.c \
 		ft_putendln_fd.c \
 		ft_putnbr_fd.c \
+		ft_putnbrb_fd.c \
 		ft_isspace.c \
 		ft_strnlen.c \
 		ft_power.c \
