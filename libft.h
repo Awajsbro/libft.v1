@@ -24,6 +24,7 @@
 */
 int				ft_power(int nb, int p);
 int				ft_sqrt(int nb);
+char			ft_cntb(long long n, char base);
 
 /*
 **			-----transformation----

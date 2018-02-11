@@ -79,6 +79,7 @@ SRC 	= ft_isascii.c \
 		ft_strnlen.c \
 		ft_power.c \
 		ft_sqrt.c \
+		ft_cntb.c \
 		ft_strclen.c \
 		get_next_line.c \
 		ft_lstnew.c \
