@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/02/08 19:42:34 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/02/16 20:04:27 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRC 	= ft_isascii.c \
 		ft_strcpy.c \
 		ft_strncmp.c \
 		ft_tolower.c \
+		ft_strlower.c \
 		ft_isalpha.c \
 		ft_memccpy.c \
 		ft_memset.c \
@@ -41,6 +42,7 @@ SRC 	= ft_isascii.c \
 		ft_strndup.c \
 		ft_strncpy.c \
 		ft_toupper.c \
+		ft_strupper.c \
 		ft_memdel.c \
 		ft_strnew.c \
 		ft_strrealloc.c \

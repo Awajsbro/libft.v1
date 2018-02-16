@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 14:11:57 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/26 16:48:11 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/16 16:00:50 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int		ft_count(long n)
+static	int		ft_count(long long n)
 {
 	int cnt;
 
@@ -26,7 +26,7 @@ static	int		ft_count(long n)
 	return (cnt);
 }
 
-char			*ft_itoa(long n)
+char			*ft_itoa(long long n)
 {
 	int		neg;
 	int		cnt;

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/08 19:41:50 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/16 20:04:29 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <fcntl.h>
+# include <stddef.h>
 
 /*
 **			-----fonction mathematique-----
@@ -31,9 +32,11 @@ char			ft_cntb(long long n, char base);
 */
 int				ft_atoi(char const *str);
 int				ft_tolower(int c);
+char			*ft_strupper(char *s);
 int				ft_toupper(int c);
-char			*ft_itoa(long n);
-char			*ft_itoab(long n, int b);
+char			*ft_strlower(char *s);
+char			*ft_itoa(long long n);
+char			*ft_itoab(long long n, int b, char *out);
 
 /*
 **			-----verification / comparaison-----
