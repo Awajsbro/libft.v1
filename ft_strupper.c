@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/16 19:56:52 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/16 20:12:29 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/19 16:37:19 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char 	*ft_strupper(char *s)
+char	*ft_strupper(char *s)
 {
 	size_t i;
 

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 19:19:24 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/10 13:59:08 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/19 16:40:40 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 size_t	ft_putnbrb(long long n, char b)
 {
-    return (ft_putnbrb_fd(n, 1, b));
+	return (ft_putnbrb_fd(n, 1, b));
 }

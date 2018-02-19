@@ -6,11 +6,12 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 09:46:13 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 15:49:18 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/19 16:40:12 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_putnbr_fd(long long n, int fd)
 {
 	char	c;

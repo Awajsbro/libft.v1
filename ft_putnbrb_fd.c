@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/08 19:20:01 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/10 13:56:31 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/02/19 16:58:30 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 size_t	ft_putnbrb_fd(long long n, int fd, char b)
 {
-    static char *base = "0123456789abcdef";
-	size_t	r;
+	static char *base = "0123456789abcdef";
+	size_t		r;
 
-    if (b != 10)
-        n = n >= 0 ? n : -n;
+	if (b != 10)
+		n = n >= 0 ? n : -n;
 	if (n == -9223372036854775807)
 	{
 		write(fd, "-9223372036854775807", 11);
