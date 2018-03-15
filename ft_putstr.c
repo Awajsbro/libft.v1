@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/29 13:57:26 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 15:22:10 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/03/06 18:06:31 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 size_t	ft_putstr(char const *str)
 {
-	return (ft_putstr_fd(str, 1));
+	return (write(1, str, ft_strlen(str)));
 }

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/29 15:07:29 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/01/29 15:22:20 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/03/07 12:11:57 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_putstrn_fd(char const *s, int fd, size_t len)
 	if (s == NULL)
 		return (0);
 	r = ft_strlen(s);
-	r = r > len ? len : r;
-	write(fd, s, r);
-	return (r);
+	if (r < len)
+		len = r;
+	return (write(fd, s, len));
 }

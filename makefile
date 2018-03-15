@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/02/16 20:04:27 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/03/12 14:44:10 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,11 @@ SRC 	= ft_isascii.c \
 		ft_strjoin.c \
 		ft_joinfree.c\
 		ft_strtrim.c \
+		ft_revstr.c \
 		ft_strsplit.c \
 		ft_itoa.c \
 		ft_itoab.c \
+		ft_uitoab.c \
 		ft_putchar.c \
 		ft_putstr.c \
 		ft_putstrn.c \
@@ -82,8 +84,8 @@ SRC 	= ft_isascii.c \
 		ft_power.c \
 		ft_sqrt.c \
 		ft_cntb.c \
+		ft_ucntb.c \
 		ft_strclen.c \
-		get_next_line.c \
 		ft_lstnew.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
@@ -103,14 +105,16 @@ OBJ = $(SRC:.c=.o)
 all : $(NAME)
 
 $(NAME) :
-	gcc -Wextra -Wall -Werror -c $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@gcc -Wextra -Wall -Werror -c $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "\033[36m	LIBFT.A\033[33m ====\033[1m> \033[32;1mREADY TO USE\033[0m"
 
 clean :
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean : clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "\033[36m	LIBFT.A\033[33m ====\033[1m> \033[31;1mDELETED\033[0m"
 
 re : fclean all

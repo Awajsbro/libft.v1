@@ -6,36 +6,28 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/26 16:46:55 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/16 15:58:30 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/03/09 19:17:01 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			*ft_itoab(long long n, int b, char *out)
+char	*ft_itoab(long long n, char b, char *out)
 {
-	long long	tmp;
-	int			neg;
-	int			cnt;
-	int			lim;
-	static char	*base = "0123456789abcdef";
-
-	tmp = n;
-	cnt = tmp > -1 ? 1 : 2;
-	tmp = tmp > 0 ? -tmp : tmp;
-	while (tmp < (-1 * (b - 1)))
+	if (out == NULL || b < 2 || b > 16)
+		return (NULL);
+	if (n == LLONG_MIN)
 	{
-		tmp = tmp / b;
-		cnt++;
+		out[0] = '-';
+		ft_uitoab(9, b, &out[1]);
+		ft_uitoab(223372036854775808, b, &out[ft_cntb(9, b) + 1]);
 	}
-	out[0] = n < 0 ? '-' : '@';
-	out[cnt] = 0;
-	lim = n < 0 ? 0 : -1;
-	neg = n < 0 ? -1 : 1;
-	while (--cnt > lim)
+	else if (b == 10 && n < 0)
 	{
-		out[cnt] = base[(neg * (n % b))];
-		n = n / b;
+		out[0] = '-';
+		ft_uitoab((n * -1), b, &out[1]);
 	}
+	else
+		ft_uitoab(n, b, out);
 	return (out);
 }

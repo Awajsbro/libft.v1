@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnlen.c                                       :+:      :+:    :+:   */
+/*   ft_uitoab.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 03:22:17 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/15 15:37:22 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/02/27 17:43:09 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/03/12 16:48:39 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(const char *s, size_t maxlen)
+char	*ft_uitoab(unsigned long long n, char b, char *out)
 {
-	size_t	tmp;
+	char		cnt;
+	static char	*base = "0123456789abcdef";
 
-	tmp = ft_strlen(s);
-	if (tmp <= maxlen)
-		return (tmp);
-	return (maxlen);
+	cnt = ft_ucntb(n, b);
+	if (out == NULL || b < 2 || b > 16)
+		return (NULL);
+	out[cnt + 0] = 0;
+	while (--cnt)
+	{
+		out[cnt + 0] = base[n % b];
+		n = n / b;
+	}
+	out[cnt + 0] = base[n % b];
+	return (out);
 }

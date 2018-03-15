@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_cntb.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/11 17:21:43 by marvin            #+#    #+#             */
-/*   Updated: 2018/02/11 17:21:43 by marvin           ###   ########.fr       */
+/*   Created: 2018/03/07 15:53:02 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/03/12 16:43:44 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	ft_cntb(long long n, char b)
 	int ret;
 
 	ret = 1;
-	n = n > -1 ? n : -n;
-	while (n >= b)
+	n = n > 0 ? -n : n;
+	while (n <= (long long)(-b))
 	{
 		n = n / b;
 		ret++;

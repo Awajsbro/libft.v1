@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnlen.c                                       :+:      :+:    :+:   */
+/*   ft_ucntb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/05 03:22:17 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/15 15:37:22 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/02/11 17:21:43 by marvin            #+#    #+#             */
+/*   Updated: 2018/03/07 15:53:30 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strnlen(const char *s, size_t maxlen)
+char	ft_ucntb(t_ull n, char b)
 {
-	size_t	tmp;
+	int ret;
 
-	tmp = ft_strlen(s);
-	if (tmp <= maxlen)
-		return (tmp);
-	return (maxlen);
+	ret = 1;
+	while (n >= (t_ull)b)
+	{
+		n = n / b;
+		ret++;
+	}
+	return (ret);
 }

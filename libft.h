@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/02/16 20:04:29 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/03/12 13:53:07 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,20 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <stddef.h>
+# include <limits.h>
+# include <stdint.h>
+
+typedef unsigned long long t_ull;
 
 /*
 **			-----fonction mathematique-----
 */
+# define ABS(x) ((x) = (x) >= 0 ? (x) : -(x))
+
 int				ft_power(int nb, int p);
 int				ft_sqrt(int nb);
 char			ft_cntb(long long n, char base);
+char			ft_ucntb(t_ull n, char base);
 
 /*
 **			-----transformation----
@@ -36,7 +43,8 @@ char			*ft_strupper(char *s);
 int				ft_toupper(int c);
 char			*ft_strlower(char *s);
 char			*ft_itoa(long long n);
-char			*ft_itoab(long long n, int b, char *out);
+char			*ft_itoab(long long n, char b, char *out);
+char			*ft_uitoab(unsigned long long n, char b, char *out);
 
 /*
 **			-----verification / comparaison-----
@@ -108,6 +116,7 @@ char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);
 char			*ft_strnstr(const char *haystack, const char *needle, size_t l);
 char			*ft_strtrim(char const *s);
+char			*ft_revstr(char *s);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striter(char *s, void (*f)(char*));
@@ -119,17 +128,14 @@ void			ft_strdel(char **as);
 /*
 **			-----structure point-----
 */
+typedef struct	s_pt
+{
+	int				x;
+	int				y;
+	int				z;
+}				t_pt;
 
-/*
-**typedef struct	s_pt
-**{
-**	int				x;
-**	int				y;
-**	int				z;
-**}				t_pt;
-**
-**t_pt			ft_ptnew(int x, int y, int z);
-*/
+t_pt			*ft_ptnew(int x, int y, int z);
 
 /*
 **			-----gestion des liste doublement chainee-----
