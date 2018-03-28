@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/12 13:53:07 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/03/26 15:30:15 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@
 # include <stddef.h>
 # include <limits.h>
 # include <stdint.h>
+# include <stdarg.h>
+# include <wchar.h>
+# include "libwr/ft_printf/ft_printf.h"
+# include "liblst/liblst.h"
+# include "libpt/libpt.h"
 
 typedef unsigned long long t_ull;
 
@@ -33,15 +38,14 @@ int				ft_power(int nb, int p);
 int				ft_sqrt(int nb);
 char			ft_cntb(long long n, char base);
 char			ft_ucntb(t_ull n, char base);
+size_t			ft_strlen(const char *s);
+size_t			ft_strclen(char const *s, int c);
+size_t			ft_strnlen(const char *s, size_t maxlen);
 
 /*
 **			-----transformation----
 */
 int				ft_atoi(char const *str);
-int				ft_tolower(int c);
-char			*ft_strupper(char *s);
-int				ft_toupper(int c);
-char			*ft_strlower(char *s);
 char			*ft_itoa(long long n);
 char			*ft_itoab(long long n, char b, char *out);
 char			*ft_uitoab(unsigned long long n, char b, char *out);
@@ -59,7 +63,12 @@ char			ft_strequ(char const *s1, char const *s2);
 char			ft_strnequ(char const *s1, char const *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
+char			*ft_strstr(const char *haystack, const char *needle);
+char			*ft_strnstr(const char *haystack, const char *needle, size_t l);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
 
 /*
 **			-----ecriture / lecture-----
@@ -88,13 +97,12 @@ void			*ft_realloc(void *s, size_t size);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			ft_memdel(void **ap);
 
 /*
-**			-----gestion de chaine de caractere-----
+**			-----gestion de caractere-----
 */
 char			*ft_strnew(size_t size);
 char			*ft_strrealloc(char *s, size_t len);
@@ -108,15 +116,12 @@ char			*ft_strncpy(char *dst, char const *src, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
-size_t			ft_strlen(const char *s);
-size_t			ft_strclen(char const *s, int c);
-size_t			ft_strnlen(const char *s, size_t maxlen);
-char			*ft_strchr(const char *s, int c);
-char			*ft_strrchr(const char *s, int c);
-char			*ft_strstr(const char *haystack, const char *needle);
-char			*ft_strnstr(const char *haystack, const char *needle, size_t l);
-char			*ft_strtrim(char const *s);
+int				ft_tolower(int c);
+char			*ft_strupper(char *s);
+int				ft_toupper(int c);
+char			*ft_strlower(char *s);
 char			*ft_revstr(char *s);
+char			*ft_strtrim(char const *s);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void			ft_striter(char *s, void (*f)(char*));
@@ -124,41 +129,5 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			**ft_strsplit(char const *s, char c);
 void			ft_strclr(char *s);
 void			ft_strdel(char **as);
-
-/*
-**			-----structure point-----
-*/
-typedef struct	s_pt
-{
-	int				x;
-	int				y;
-	int				z;
-}				t_pt;
-
-t_pt			*ft_ptnew(int x, int y, int z);
-
-/*
-**			-----gestion des liste doublement chainee-----
-*/
-typedef struct	s_list
-{
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-	struct s_list	*prev;
-}				t_list;
-
-t_list			*ft_lstnew(void *content, size_t content_size);
-void			ft_lstaddstart(t_list **alst, t_list *new);
-void			ft_lstaddend(t_list **alst, t_list *new);
-t_list			*ft_lststart(t_list *lst);
-t_list			*ft_lstend(t_list *lst);
-t_list			*ft_lstfindcont(t_list *lst, void *content);
-t_list			*ft_lstfindsize(t_list *lst, size_t size);
-size_t			ft_lstlen(t_list *lst);
-void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-void			ft_lstdelone(t_list **alst);
-void			ft_lstdel(t_list **alist);
 
 #endif

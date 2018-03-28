@@ -6,99 +6,121 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/03/12 14:44:10 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/03/26 19:56:36 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRC 	= ft_isascii.c \
-		ft_memchr.c \
-		ft_strcat.c \
-		ft_strlcat.c \
-		ft_strnstr.c \
-		ft_atoi.c \
-		ft_isdigit.c \
-		ft_memcmp.c \
-		ft_strchr.c \
-		ft_strlen.c \
-		ft_strrchr.c \
-		ft_bzero.c \
-		ft_isprint.c \
-		ft_memcpy.c \
-		ft_strcmp.c \
-		ft_strncat.c \
-		ft_strstr.c \
-		ft_isalnum.c \
-		ft_memmove.c \
-		ft_strcpy.c \
-		ft_strncmp.c \
-		ft_tolower.c \
-		ft_strlower.c \
-		ft_isalpha.c \
-		ft_memccpy.c \
-		ft_memset.c \
-		ft_strdup.c \
-		ft_strndup.c \
-		ft_strncpy.c \
-		ft_toupper.c \
-		ft_strupper.c \
-		ft_memdel.c \
-		ft_strnew.c \
-		ft_strrealloc.c \
-		ft_strdel.c \
-		ft_memalloc.c \
-		ft_realloc.c \
-		ft_strclr.c \
-		ft_striter.c \
-		ft_striteri.c \
-		ft_strmap.c \
-		ft_strmapi.c \
-		ft_strequ.c \
-		ft_strnequ.c \
-		ft_strsub.c \
-		ft_strjoin.c \
-		ft_joinfree.c\
-		ft_strtrim.c \
-		ft_revstr.c \
-		ft_strsplit.c \
-		ft_itoa.c \
-		ft_itoab.c \
-		ft_uitoab.c \
-		ft_putchar.c \
-		ft_putstr.c \
-		ft_putstrn.c \
-		ft_putendl.c \
-		ft_putendln.c \
-		ft_putnbr.c \
-		ft_putnbrb.c \
-		ft_putchar_fd.c \
-		ft_putstr_fd.c \
-		ft_putstrn_fd.c \
-		ft_putendl_fd.c \
-		ft_putendln_fd.c \
-		ft_putnbr_fd.c \
-		ft_putnbrb_fd.c \
-		ft_isspace.c \
-		ft_strnlen.c \
-		ft_power.c \
-		ft_sqrt.c \
-		ft_cntb.c \
-		ft_ucntb.c \
-		ft_strclen.c \
-		ft_lstnew.c \
-		ft_lstdelone.c \
-		ft_lstdel.c \
-		ft_lstaddend.c \
-		ft_lstaddstart.c \
-		ft_lstfindcont.c \
-		ft_lstfindsize.c \
-		ft_lstend.c \
-		ft_lstlen.c \
-		ft_lststart.c \
-		ft_lstiter.c \
-		ft_lstmap.c \
-		ft_ptnew.c \
+SRCMEM	= 	libmem/ft_bzero.c \
+			libmem/ft_memcpy.c \
+			libmem/ft_memmove.c \
+			libmem/ft_memccpy.c \
+			libmem/ft_memset.c \
+			libmem/ft_memdel.c \
+			libmem/ft_memalloc.c \
+			libmem/ft_realloc.c
+
+SRCCHAR	= 	libchar/ft_tolower.c \
+			libchar/ft_toupper.c \
+			libchar/ft_joinfree.c \
+			libchar/ft_revstr.c \
+			libchar/ft_strcat.c \
+			libchar/ft_strlcat.c \
+			libchar/ft_strncat.c \
+			libchar/ft_strcpy.c \
+			libchar/ft_strlower.c \
+			libchar/ft_strdup.c \
+			libchar/ft_strndup.c \
+			libchar/ft_strncpy.c \
+			libchar/ft_strupper.c \
+			libchar/ft_strnew.c \
+			libchar/ft_strrealloc.c \
+			libchar/ft_strdel.c \
+			libchar/ft_strclr.c \
+			libchar/ft_striter.c \
+			libchar/ft_striteri.c \
+			libchar/ft_strmap.c \
+			libchar/ft_strmapi.c \
+			libchar/ft_strsub.c \
+			libchar/ft_strjoin.c \
+			libchar/ft_strtrim.c \
+			libchar/ft_strsplit.c
+
+SRCTYPE	=	libtype/ft_atoi.c \
+			libtype/ft_itoa.c \
+			libtype/ft_itoab.c \
+			libtype/ft_uitoab.c
+
+SRCMATH	=	libmath/ft_strlen.c \
+			libmath/ft_strnlen.c \
+			libmath/ft_power.c \
+			libmath/ft_sqrt.c \
+			libmath/ft_cntb.c \
+			libmath/ft_ucntb.c \
+			libmath/ft_strclen.c
+
+SRCCMP	=	libcmp/ft_isascii.c \
+			libcmp/ft_strnstr.c \
+			libcmp/ft_strstr.c \
+			libcmp/ft_memcmp.c \
+			libcmp/ft_strcmp.c \
+			libcmp/ft_strncmp.c \
+			libcmp/ft_strequ.c \
+			libcmp/ft_strnequ.c \
+			libcmp/ft_memchr.c \
+			libcmp/ft_isdigit.c \
+			libcmp/ft_strchr.c \
+			libcmp/ft_strrchr.c \
+			libcmp/ft_isprint.c \
+			libcmp/ft_isalnum.c \
+			libcmp/ft_isalpha.c \
+			libcmp/ft_isspace.c
+
+SRCLST	=	liblst/ft_lstnew.c \
+			liblst/ft_lstdelone.c \
+			liblst/ft_lstdel.c \
+			liblst/ft_lstaddend.c \
+			liblst/ft_lstaddstart.c \
+			liblst/ft_lstfindcont.c \
+			liblst/ft_lstfindsize.c \
+			liblst/ft_lstend.c \
+			liblst/ft_lstlen.c \
+			liblst/ft_lststart.c \
+			liblst/ft_lstiter.c \
+			liblst/ft_lstmap.c
+
+SRCPT	=	libpt/ft_ptnew.c
+
+SRCWR	=	libwr/ft_putchar.c \
+			libwr/ft_putstr.c \
+			libwr/ft_putstrn.c \
+			libwr/ft_putendl.c \
+			libwr/ft_putendln.c \
+			libwr/ft_putnbr.c \
+			libwr/ft_putnbrb.c \
+			libwr/ft_putchar_fd.c \
+			libwr/ft_putstr_fd.c \
+			libwr/ft_putstrn_fd.c \
+			libwr/ft_putendl_fd.c \
+			libwr/ft_putendln_fd.c \
+			libwr/ft_putnbr_fd.c \
+			libwr/ft_putnbrb_fd.c \
+			libwr/ft_printf.c \
+			libwr/ft_printf/ft_init_arg.c \
+			libwr/ft_printf/ft_signed_buff.c \
+			libwr/ft_printf/ft_unsigned_buff.c \
+			libwr/ft_printf/ft_print_setup.c \
+			libwr/ft_printf/ft_pars_color.c \
+			libwr/ft_printf/ft_letter_buff.c \
+			libwr/ft_printf/ft_wchar_pars.c \
+			libwr/ft_printf/ft_wchar_supp.c \
+			libwr/ft_printf/ft_length_pars.c \
+			libwr/ft_printf/ft_change_color.c \
+			libwr/ft_printf/ft_change_back.c \
+			libwr/ft_printf/ft_print_itab.c
+
+SRC = $(SRCPT) $(SRCWR) $(SRCLST) $(SRCCHAR) $(SRCMATH) $(SRCTYPE) $(SRCCMP) $(SRCMEM)
 
 OBJ = $(SRC:.c=.o)
 
@@ -106,12 +128,12 @@ all : $(NAME)
 
 $(NAME) :
 	@gcc -Wextra -Wall -Werror -c $(SRC)
-	@ar rc $(NAME) $(OBJ)
+	@ar rc $(NAME) $(notdir $(OBJ))
 	@ranlib $(NAME)
 	@echo "\033[36m	LIBFT.A\033[33m ====\033[1m> \033[32;1mREADY TO USE\033[0m"
 
 clean :
-	@rm -f $(OBJ)
+	@rm -f $(notdir $(OBJ))
 
 fclean : clean
 	@rm -f $(NAME)
