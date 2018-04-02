@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstremove.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:11:55 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/31 13:58:04 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/04/01 12:20:42 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/04/01 16:42:02 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "liblst.h"
 
-void	ft_lstdelone(t_list **alst)
+t_list	*ft_lstremove(t_list **alst)
 {
 	t_list	*prev;
 	t_list	*next;
+	t_list	*ret;
 
 	if (alst == NULL)
-		return ;
+		return (NULL);
+	ret = *alst;
 	next = (*alst)->next;
 	prev = (*alst)->prev;
-	if ((*alst)->next == NULL)
+	if (next == NULL && prev == NULL)
+		;
+	else if ((*alst)->next == NULL)
 		prev->next = NULL;
 	else if ((*alst)->prev == NULL)
 		next->prev = NULL;
@@ -30,8 +34,8 @@ void	ft_lstdelone(t_list **alst)
 		next->prev = prev;
 		prev->next = next;
 	}
-	ft_bzero((*alst)->content, (*alst)->size);
-	(*alst)->size = 0;
-	ft_memdel((*alst)->content);
-	ft_memdel((void**)alst);
+	(*alst)->next = NULL;
+	(*alst)->prev = NULL;
+	*alst = next == NULL ? prev : next;
+	return (ret);
 }

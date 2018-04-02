@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/03/26 19:56:36 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/04/02 17:28:31 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,34 +61,37 @@ SRCMATH	=	libmath/ft_strlen.c \
 			libmath/ft_strclen.c
 
 SRCCMP	=	libcmp/ft_isascii.c \
-			libcmp/ft_strnstr.c \
-			libcmp/ft_strstr.c \
-			libcmp/ft_memcmp.c \
-			libcmp/ft_strcmp.c \
-			libcmp/ft_strncmp.c \
-			libcmp/ft_strequ.c \
-			libcmp/ft_strnequ.c \
-			libcmp/ft_memchr.c \
 			libcmp/ft_isdigit.c \
-			libcmp/ft_strchr.c \
-			libcmp/ft_strrchr.c \
 			libcmp/ft_isprint.c \
 			libcmp/ft_isalnum.c \
 			libcmp/ft_isalpha.c \
-			libcmp/ft_isspace.c
+			libcmp/ft_isspace.c \
+			libcmp/ft_strdigit.c \
+			libcmp/ft_strequ.c \
+			libcmp/ft_strnequ.c \
+			libcmp/ft_istrcmp.c \
+			libcmp/ft_strcmp.c \
+			libcmp/ft_strncmp.c \
+			libcmp/ft_strnstr.c \
+			libcmp/ft_strstr.c \
+			libcmp/ft_memcmp.c \
+			libcmp/ft_memchr.c \
+			libcmp/ft_strchr.c \
+			libcmp/ft_strrchr.c \
 
 SRCLST	=	liblst/ft_lstnew.c \
-			liblst/ft_lstdelone.c \
-			liblst/ft_lstdel.c \
-			liblst/ft_lstaddend.c \
 			liblst/ft_lstaddstart.c \
+			liblst/ft_lstaddend.c \
 			liblst/ft_lstfindcont.c \
 			liblst/ft_lstfindsize.c \
 			liblst/ft_lstend.c \
 			liblst/ft_lstlen.c \
 			liblst/ft_lststart.c \
 			liblst/ft_lstiter.c \
-			liblst/ft_lstmap.c
+			liblst/ft_lstmap.c \
+			liblst/ft_lstremove.c \
+			liblst/ft_lstdelone.c \
+			liblst/ft_lstdel.c \
 
 SRCPT	=	libpt/ft_ptnew.c
 
@@ -106,6 +109,7 @@ SRCWR	=	libwr/ft_putchar.c \
 			libwr/ft_putendln_fd.c \
 			libwr/ft_putnbr_fd.c \
 			libwr/ft_putnbrb_fd.c \
+			libwr/get_next_line.c \
 			libwr/ft_printf.c \
 			libwr/ft_printf/ft_init_arg.c \
 			libwr/ft_printf/ft_signed_buff.c \
@@ -122,21 +126,26 @@ SRCWR	=	libwr/ft_putchar.c \
 
 SRC = $(SRCPT) $(SRCWR) $(SRCLST) $(SRCCHAR) $(SRCMATH) $(SRCTYPE) $(SRCCMP) $(SRCMEM)
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(notdir $(SRC:.c=.o))
+
+OBJDIR = obj/
 
 all : $(NAME)
 
 $(NAME) :
+	@mkdir -p $(OBJDIR)
 	@gcc -Wextra -Wall -Werror -c $(SRC)
-	@ar rc $(NAME) $(notdir $(OBJ))
+	@mv $(OBJ) $(OBJDIR)
+	@ar rc $(NAME) $(addprefix $(OBJDIR), $(OBJ))
 	@ranlib $(NAME)
-	@echo "\033[36m	LIBFT.A\033[33m ====\033[1m> \033[32;1mREADY TO USE\033[0m"
+	@echo "\033[36m	LIBFT.A\033[33m   ====\033[1m> \033[32;1mREADY TO USE\033[0m"
 
 clean :
-	@rm -f $(notdir $(OBJ))
+	@rm -f $(addprefix $(OBJDIR), $(OBJ))
+	@echo "\033[31;1m	CLEANING DONE\033[0m"
 
 fclean : clean
 	@rm -f $(NAME)
-	@echo "\033[36m	LIBFT.A\033[33m ====\033[1m> \033[31;1mDELETED\033[0m"
+	@echo "\033[36m	LIBFT.A\033[33m   ====\033[1m> \033[31;1mDELETED\033[0m"
 
 re : fclean all

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/12 19:19:32 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/02 13:17:45 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/02 14:58:45 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,15 @@ static void	ft_printf_etat(char const *s, int *i, t_col *col, char m)
 	*i = m == 1 ? *i : (*i + 5);
 }
 
+static void ft_printf_end_reset(char const *s, int *i, t_col *col)
+{
+	ft_strcat(col->buff, "\033[0m");
+	ft_printf_color(s, i, col, 1);
+	ft_printf_back(s, i, col, 1);
+	ft_printf_etat(s, i, col, 1);
+	*i = *i + 5;
+}
+
 static void	ft_printf_reset(char const *s, int *i, t_col *col)
 {
 	if (ft_strnequ(&s[*i], "true}", 5) == 1)
@@ -54,16 +63,14 @@ static void	ft_printf_reset(char const *s, int *i, t_col *col)
 		*(col->e) = ((*(col->e) % 3) == 0) ? (*(col->e) / 3) : *(col->e);
 	else if (ft_strnequ(&s[*i], "clig}", 5) == 1)
 		*(col->e) = ((*(col->e) % 5) == 0) ? (*(col->e) / 5) : *(col->e);
+	else if (ft_strnequ(&s[*i], "stat}", 5) == 1)
+		*(col->e) = 1;
 	else
 	{
 		*i = *i - 7;
 		return ;
 	}
-	ft_strcat(col->buff, "\033[0m");
-	ft_printf_color(s, i, col, 1);
-	ft_printf_back(s, i, col, 1);
-	ft_printf_etat(s, i, col, 1);
-	*i = *i + 5;
+	ft_printf_end_reset(s, i, col);
 }
 
 static void	ft_true_pars_color(char const *s, int *i, t_col *col)

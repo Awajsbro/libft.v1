@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfindsize.c                                   :+:      :+:    :+:   */
+/*   ft_strdigit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:09:49 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/01 11:50:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/04/02 16:41:19 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/04/02 17:04:07 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "liblst.h"
+#include "../libft.h"
 
-char	ft_lstfindsize(t_list *lst, long long size)
+char	ft_strdigit(char *s)
 {
-	lst = ft_lststart(lst);
-	while (lst->size != size && lst->next != NULL)
-		lst = lst->next;
-	return (lst->size == size ? 1 : 0);
+	if (s == NULL)
+	while (s)
+	{
+		if(ft_isdigit(*s) == 0)
+			return (0);
+		s++;
+	}
+	return (1);
 }

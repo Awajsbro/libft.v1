@@ -6,16 +6,18 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:12:10 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/01 11:48:45 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "liblst.h"
 
-t_list	*ft_lstfindcont(t_list *lst, void *content)
+char	ft_lstfindcont(t_list *lst, void *content)
 {
+	char r;
+
 	lst = ft_lststart(lst);
-	while (lst->content != content && lst->next != NULL)
+	while ((r = ft_strequ(lst->content, content)) == 0 && lst->next != NULL)
 		lst = lst->next;
-	return (lst);
+	return (r);
 }

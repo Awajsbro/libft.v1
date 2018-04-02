@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfindsize.c                                   :+:      :+:    :+:   */
+/*   ft_istrcmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:09:49 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/01 11:50:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/04/02 16:54:49 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/04/02 17:39:23 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "liblst.h"
+#include "../libft.h"
 
-char	ft_lstfindsize(t_list *lst, long long size)
+char	ft_istrcmp(char *n1, char *n2)
 {
-	lst = ft_lststart(lst);
-	while (lst->size != size && lst->next != NULL)
-		lst = lst->next;
-	return (lst->size == size ? 1 : 0);
+	long long	len1;
+	long long	len2;
+
+	if (n1 == NULL || n2 == NULL || !(ft_strdigit(n1)) || !(ft_strdigit(n2)))
+		return (-42);
+	len1 = ft_strlen(n1);
+	len2 = ft_strlen(n2);
+	if (len1 == len2)
+		len1 = ft_strcmp(n1, n2);
+	if (len1 > 0)
+		return (1);
+	else if (len1 > 0)
+		return (-1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 17:56:46 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/28 14:38:29 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/02 15:20:49 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char			ft_printf_back(char const *s, int *i, t_col *col, char m);
 int				ft_print_itab(va_list va, t_arg *arg);
 
 /*
+** [fd*]		 =	prend * comme fichier d'ecriture
+** [\fd]		 =	reinitialise le fd
 ** {state_gras}	 =	\033[01m --	active le gras
 ** {state_soul}	 =	\033[04m --	active le souligner
 ** {state_clig}	 =	\033[05m --	active le clignotement

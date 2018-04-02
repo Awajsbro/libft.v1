@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 15:30:15 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/02 17:07:00 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ size_t			ft_strnlen(const char *s, size_t maxlen);
 /*
 **			-----transformation----
 */
-int				ft_atoi(char const *str);
+long long		ft_atoi(char const *str);
 char			*ft_itoa(long long n);
 char			*ft_itoab(long long n, char b, char *out);
 char			*ft_uitoab(unsigned long long n, char b, char *out);
@@ -59,8 +59,10 @@ char			ft_isascii(int c);
 char			ft_isdigit(int c);
 char			ft_isprint(int c);
 char			ft_isspace(int c);
+char			ft_strdigit(char* s);
 char			ft_strequ(char const *s1, char const *s2);
 char			ft_strnequ(char const *s1, char const *s2, size_t n);
+char			ft_istrcmp(char *n1, char *n2);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
