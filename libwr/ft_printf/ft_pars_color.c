@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/12 19:19:32 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/02 14:58:45 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/05 12:26:17 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	ft_printf_etat(char const *s, int *i, t_col *col, char m)
 	*i = m == 1 ? *i : (*i + 5);
 }
 
-static void ft_printf_end_reset(char const *s, int *i, t_col *col)
+static void	ft_printf_end_reset(char const *s, int *i, t_col *col)
 {
 	ft_strcat(col->buff, "\033[0m");
 	ft_printf_color(s, i, col, 1);
