@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 16:54:49 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/02 17:39:23 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/07 17:29:27 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,20 @@ char	ft_istrcmp(char *n1, char *n2)
 
 	if (n1 == NULL || n2 == NULL || !(ft_strdigit(n1)) || !(ft_strdigit(n2)))
 		return (-42);
+	if ((n1[0] == '-' || n2[0] == '-') && n1[0] != n2[0])
+		return (n1[0] == '-' ? 1 : -1);
 	len1 = ft_strlen(n1);
 	len2 = ft_strlen(n2);
-	if (len1 == len2)
-		len1 = ft_strcmp(n1, n2);
-	if (len1 > 0)
-		return (1);
-	else if (len1 > 0)
-		return (-1);
-	return (0);
+	if (len1 != len2)
+	{
+		if (n1[0] == '-')
+			return (len1 > len2 ? -1 : 1);
+		return (len1 > len2 ? 1 : -1);
+	}
+	len1 = ft_strcmp(n1, n2);
+	if (len1 == 0)
+		return (0);
+	else if (n1[0] == '-')
+		return (len1 > 0 ? -1 : 1);
+	return (len1 > len2 ? 1 : -1);
 }
