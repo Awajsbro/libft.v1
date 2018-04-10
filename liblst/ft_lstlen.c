@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:10:44 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/10 18:08:59 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ size_t	ft_lstlen(t_list *lst)
 {
 	size_t	i;
 
-	i = 0;
+	if (lst == NULL)
+		return (0);
+	i = 1;
 	while (lst->prev != NULL)
 		lst = lst->prev;
 	while (lst->next != NULL)

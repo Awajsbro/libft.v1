@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/04/02 17:28:31 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/04/10 11:43:39 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -89,6 +89,8 @@ SRCLST	=	liblst/ft_lstnew.c \
 			liblst/ft_lststart.c \
 			liblst/ft_lstiter.c \
 			liblst/ft_lstmap.c \
+			liblst/ft_lstprintcont.c \
+			liblst/ft_lstprintsize.c \
 			liblst/ft_lstremove.c \
 			liblst/ft_lstdelone.c \
 			liblst/ft_lstdel.c \

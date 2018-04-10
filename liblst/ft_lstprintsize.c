@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstprintsize.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:11:46 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/10 16:31:40 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/04/10 11:36:32 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/04/10 13:18:03 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "liblst.h"
 
-void	ft_lstdel(t_list **alst)
+void	ft_lstprintsize(t_list *lst, char c)
 {
-	t_list	*tmp;
-
-	if (alst == NULL)
+	if (lst == NULL)
 		return ;
-	*alst = ft_lststart(*alst);
-	while (*alst != NULL)
+	lst = ft_lststart(lst);
+	while (lst->next != NULL)
 	{
-		tmp = (*alst)->next;
-		ft_bzero((*alst)->content, ft_strlen((*alst)->content));
-		free((*alst)->content);
-		free(*alst);
-		*alst = tmp;
+		ft_putnbr(lst->size);
+		write(1, &c, 1);
+		lst = lst->next;
 	}
+	ft_putnbr(lst->size);
+	write(1, &c, 1);
 }

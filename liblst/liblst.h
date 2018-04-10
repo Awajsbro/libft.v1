@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/26 15:28:22 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/01 13:13:22 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/10 11:37:28 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char			ft_lstfindcont(t_list *lst, void *content);
 char			ft_lstfindsize(t_list *lst, long long size);
 size_t			ft_lstlen(t_list *lst);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+void			ft_lstprintcont(t_list *lst, char c);
+void			ft_lstprintsize(t_list *lst, char c);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list			*ft_lstremove(t_list **alst);
 void			ft_lstdelone(t_list **alst);
