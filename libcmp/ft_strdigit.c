@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 16:41:19 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/06 19:46:24 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/07 17:43:13 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	ft_strdigit(char *s)
 		return (0);
 	if (s[i] == '-')
 		i++;
-	while (s)
+	while (s[i] != 0)
 	{
 		if (ft_isdigit(s[i]) == 0)
 			return (0);

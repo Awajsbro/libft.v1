@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:12:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/07 18:43:35 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 t_list	*ft_lstend(t_list *lst)
 {
+	if (lst == NULL)
+		return (NULL);
 	while (lst->next != NULL)
 		lst = lst->next;
 	return (lst);
