@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 16:54:49 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/07 17:48:19 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/11 15:45:41 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	ft_istrcmp(char *n1, char *n2)
 	long long	len1;
 	long long	len2;
 
-	if (n1 == NULL || n2 == NULL || (ft_strdigit(n1)) == 0|| (ft_strdigit(n2) == 0))
+	if (n1 == NULL || n2 == NULL || !(ft_strdigit(n1)) || !(ft_strdigit(n2)))
 		return (-42);
 	if ((n1[0] == '-' || n2[0] == '-') && n1[0] != n2[0])
 		return (n1[0] == '-' ? -1 : 1);

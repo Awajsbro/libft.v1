@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:11:27 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/11 15:03:18 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_lstaddstart(t_list **alst, t_list *new)
 {
 	if (new == NULL)
 		return ;
+	*alst = ft_lststart(*alst);
 	new->next = *alst;
-	(*alst)->prev = new;
+	if (*alst != NULL)
+		(*alst)->prev = new;
 	*alst = new;
 }

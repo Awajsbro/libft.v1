@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/20 18:11:34 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/11 15:02:56 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ void	ft_lstaddend(t_list **alst, t_list *new)
 {
 	if (new == NULL)
 		return ;
+	*alst = ft_lstend(*alst);
 	new->prev = *alst;
-	(*alst)->next = new;
+	if (*alst != NULL)
+		(*alst)->next = new;
 	*alst = new;
 }
