@@ -6,24 +6,25 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/04/10 11:43:39 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/04/22 17:59:01 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCMEM	= 	libmem/ft_bzero.c \
+SRCMEM	= 	libmem/ft_memalloc.c \
+			libmem/ft_realloc.c \
+			libmem/ft_bzero.c \
+			libmem/ft_memset.c \
 			libmem/ft_memcpy.c \
 			libmem/ft_memmove.c \
 			libmem/ft_memccpy.c \
-			libmem/ft_memset.c \
 			libmem/ft_memdel.c \
-			libmem/ft_memalloc.c \
-			libmem/ft_realloc.c
 
 SRCCHAR	= 	libchar/ft_tolower.c \
 			libchar/ft_toupper.c \
 			libchar/ft_joinfree.c \
+			libchar/ft_swap_char.c \
 			libchar/ft_revstr.c \
 			libchar/ft_strcat.c \
 			libchar/ft_strlcat.c \
@@ -45,20 +46,21 @@ SRCCHAR	= 	libchar/ft_tolower.c \
 			libchar/ft_strsub.c \
 			libchar/ft_strjoin.c \
 			libchar/ft_strtrim.c \
-			libchar/ft_strsplit.c
+			libchar/ft_strsplit.c \
 
 SRCTYPE	=	libtype/ft_atoi.c \
 			libtype/ft_itoa.c \
 			libtype/ft_itoab.c \
-			libtype/ft_uitoab.c
+			libtype/ft_uitoab.c \
 
 SRCMATH	=	libmath/ft_strlen.c \
 			libmath/ft_strnlen.c \
+			libmath/ft_swap_int.c \
 			libmath/ft_power.c \
 			libmath/ft_sqrt.c \
 			libmath/ft_cntb.c \
 			libmath/ft_ucntb.c \
-			libmath/ft_strclen.c
+			libmath/ft_strclen.c \
 
 SRCCMP	=	libcmp/ft_isascii.c \
 			libcmp/ft_isdigit.c \
@@ -82,6 +84,7 @@ SRCCMP	=	libcmp/ft_isascii.c \
 SRCLST	=	liblst/ft_lstnew.c \
 			liblst/ft_lstaddstart.c \
 			liblst/ft_lstaddend.c \
+			liblst/ft_lstcpy.c \
 			liblst/ft_lstfindcont.c \
 			liblst/ft_lstfindsize.c \
 			liblst/ft_lstend.c \

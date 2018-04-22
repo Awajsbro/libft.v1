@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/04/05 12:26:38 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/04/22 18:00:53 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef unsigned long long t_ull;
 */
 # define ABS(x) ((x) = (x) >= 0 ? (x) : -(x))
 
+void			ft_swap_int(int *val1, int *val2);
 int				ft_power(int nb, int p);
 int				ft_sqrt(int nb);
 char			ft_cntb(long long n, char base);
@@ -118,6 +119,7 @@ char			*ft_strncpy(char *dst, char const *src, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
+void			ft_swap_char(char *val1, char *val2);
 int				ft_tolower(int c);
 char			*ft_strupper(char *s);
 int				ft_toupper(int c);
