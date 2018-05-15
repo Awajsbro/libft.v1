@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/04/22 17:59:01 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/05/13 18:14:53 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -145,8 +145,16 @@ $(NAME) :
 	@ranlib $(NAME)
 	@echo "\033[36m	LIBFT.A\033[33m   ====\033[1m> \033[32;1mREADY TO USE\033[0m"
 
+debug :
+	@mkdir -p $(OBJDIR)
+	@gcc -ggdb -Wextra -Wall -Werror -c $(SRC)
+	@mv $(OBJ) $(OBJDIR)
+	@ar rc $(NAME) $(addprefix $(OBJDIR), $(OBJ))
+	@ranlib $(NAME)
+	@echo "\033[36m	LIBFT.A\033[33m   ====\033[1m> \033[32;1mREADY TO USE\033[0m"
+
 clean :
-	@rm -f $(addprefix $(OBJDIR), $(OBJ))
+	@rm -rf $(OBJDIR)
 	@echo "\033[31;1m	CLEANING DONE\033[0m"
 
 fclean : clean
