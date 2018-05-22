@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/13 19:02:50 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/05/20 18:51:58 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,6 +133,5 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			**ft_strsplit(char const *s, char c);
 void			ft_strclr(char *s);
 void			ft_strdel(char **as);
-
 
 #endif
