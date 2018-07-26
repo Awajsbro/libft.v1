@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libpt.h                                            :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/26 15:26:40 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/29 18:12:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/05/28 14:52:39 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/05/28 15:02:37 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPT_H
-# define LIBPT_H
+#include "../libft.h"
 
-# include "../libft.h"
-
-/*
-**			-----structure point-----
-*/
-typedef struct	s_pt
+void	ft_swap(void **ptr1, void **ptr2)
 {
-	char			*name;
-	int				x;
-	int				y;
-	int				z;
-}				t_pt;
+	void	*tmp;
 
-t_pt			*ft_ptnew(char *name, int x, int y, int z);
-void			ft_ptdel(t_pt **pt);
-
-#endif
+	if (ptr1 == ptr2)
+		return ;
+	tmp = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = tmp;
+}

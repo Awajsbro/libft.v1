@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libpt.h                                            :+:      :+:    :+:   */
+/*   ft_coucou.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/26 15:26:40 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/29 18:12:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/06/01 19:41:31 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/06/01 19:52:19 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPT_H
-# define LIBPT_H
+#include "libnimp.h"
 
-# include "../libft.h"
-
-/*
-**			-----structure point-----
-*/
-typedef struct	s_pt
+void	ft_coucou(void)
 {
-	char			*name;
-	int				x;
-	int				y;
-	int				z;
-}				t_pt;
+	static int i = 0;
 
-t_pt			*ft_ptnew(char *name, int x, int y, int z);
-void			ft_ptdel(t_pt **pt);
-
-#endif
+	ft_putnbr(i++);
+	ft_putendl(" --> coucou");
+}

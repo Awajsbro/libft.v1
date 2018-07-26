@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/20 18:51:58 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/06/01 19:46:52 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@
 # include "libwr/ft_printf/ft_printf.h"
 # include "liblst/liblst.h"
 # include "libpt/libpt.h"
+# include "non_tes_serieux/libnimp.h"
 
 typedef unsigned long long t_ull;
 
@@ -64,6 +65,7 @@ char			ft_strdigit(char *s);
 char			ft_strequ(char const *s1, char const *s2);
 char			ft_strnequ(char const *s1, char const *s2, size_t n);
 char			ft_istrcmp(char *n1, char *n2);
+char			ft_is_in(void *content, char size_of, void **tab, size_t size);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
@@ -102,6 +104,7 @@ void			*ft_memset(void *b, int c, size_t len);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
+void			ft_swap(void **ptr1, void **ptr2);
 void			ft_memdel(void **ap);
 
 /*
@@ -113,6 +116,7 @@ char			*ft_strdup(char const *s1);
 char			*ft_strndup(char const *s1, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_joinfree(char *s1, char *s2);
+char			*ft_joinnfree(char *s1, char *s2, char f);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strncpy(char *dst, char const *src, size_t len);

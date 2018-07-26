@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libpt.h                                            :+:      :+:    :+:   */
+/*   ft_ptdel.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/26 15:26:40 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/29 18:12:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/05/29 18:12:39 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/07/12 15:31:52 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPT_H
-# define LIBPT_H
+#include "libpt.h"
 
-# include "../libft.h"
-
-/*
-**			-----structure point-----
-*/
-typedef struct	s_pt
+void	ft_ptdel(t_pt **pt)
 {
-	char			*name;
-	int				x;
-	int				y;
-	int				z;
-}				t_pt;
-
-t_pt			*ft_ptnew(char *name, int x, int y, int z);
-void			ft_ptdel(t_pt **pt);
-
-#endif
+	ft_strdel(&((*pt)->name));
+	(*pt)->x = 0;
+	(*pt)->y = 0;
+	(*pt)->z = 0;
+	free(*pt);
+	*pt == NULL;
+}

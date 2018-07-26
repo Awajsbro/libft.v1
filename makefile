@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/05/13 18:14:53 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/06/01 19:48:12 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,11 +19,14 @@ SRCMEM	= 	libmem/ft_memalloc.c \
 			libmem/ft_memcpy.c \
 			libmem/ft_memmove.c \
 			libmem/ft_memccpy.c \
+			libmem/ft_swap.c \
 			libmem/ft_memdel.c \
 
 SRCCHAR	= 	libchar/ft_tolower.c \
 			libchar/ft_toupper.c \
+			libchar/ft_strjoin.c \
 			libchar/ft_joinfree.c \
+			libchar/ft_joinnfree.c \
 			libchar/ft_swap_char.c \
 			libchar/ft_revstr.c \
 			libchar/ft_strcat.c \
@@ -44,7 +47,6 @@ SRCCHAR	= 	libchar/ft_tolower.c \
 			libchar/ft_strmap.c \
 			libchar/ft_strmapi.c \
 			libchar/ft_strsub.c \
-			libchar/ft_strjoin.c \
 			libchar/ft_strtrim.c \
 			libchar/ft_strsplit.c \
 
@@ -72,6 +74,7 @@ SRCCMP	=	libcmp/ft_isascii.c \
 			libcmp/ft_strequ.c \
 			libcmp/ft_strnequ.c \
 			libcmp/ft_istrcmp.c \
+			libcmp/ft_is_in.c \
 			libcmp/ft_strcmp.c \
 			libcmp/ft_strncmp.c \
 			libcmp/ft_strnstr.c \
@@ -98,7 +101,8 @@ SRCLST	=	liblst/ft_lstnew.c \
 			liblst/ft_lstdelone.c \
 			liblst/ft_lstdel.c \
 
-SRCPT	=	libpt/ft_ptnew.c
+SRCPT	=	libpt/ft_ptnew.c \
+			libpt/ft_ptdel.c \
 
 SRCWR	=	libwr/ft_putchar.c \
 			libwr/ft_putstr.c \
@@ -129,7 +133,10 @@ SRCWR	=	libwr/ft_putchar.c \
 			libwr/ft_printf/ft_change_back.c \
 			libwr/ft_printf/ft_print_itab.c
 
-SRC = $(SRCPT) $(SRCWR) $(SRCLST) $(SRCCHAR) $(SRCMATH) $(SRCTYPE) $(SRCCMP) $(SRCMEM)
+SRCNIMP	=	non_tes_serieux/a.c \
+			non_tes_serieux/ft_coucou.c \
+
+SRC = $(SRCPT) $(SRCWR) $(SRCLST) $(SRCCHAR) $(SRCMATH) $(SRCTYPE) $(SRCCMP) $(SRCMEM) $(SRCNIMP)
 
 OBJ = $(notdir $(SRC:.c=.o))
 

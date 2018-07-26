@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/17 12:13:04 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/15 12:52:47 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/06/04 10:56:33 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int				get_next_line(const int fd, char **line)
 		lst = ft_lstnew(ft_memalloc(BUFF_SIZE + 1), fd);
 	else
 	{
-		if (ft_lstfindsize(lst, fd) == 0)
+		if (ft_lstfindsize(&lst, fd) == 0)
 			ft_lstaddend(&lst, ft_lstnew(ft_memalloc(BUFF_SIZE + 1), fd));
 	}
 	if (lst == NULL)

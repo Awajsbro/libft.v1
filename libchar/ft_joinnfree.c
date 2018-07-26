@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_joinfree.c                                      :+:      :+:    :+:   */
+/*   ft_joinnfree.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:22:12 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/27 16:36:42 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/05/27 16:36:12 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_joinfree(char *s1, char *s2)
+static void ft_free(char *s1, char *s2, char f)
+{
+	if (f == 1 || f == 3)
+		free(s1);
+	if (f == 2 || f == 3)
+		free(s2);
+}
+
+char	*ft_joinnfree(char *s1, char *s2, char f)
 {
 	char	*n;
 	size_t	i;
@@ -24,8 +32,7 @@ char	*ft_joinfree(char *s1, char *s2)
 	j = ft_strlen(s2);
 	if (!(n = (char*)malloc(sizeof(n) * (i + j + 1))))
 	{
-		free(s1);
-		free(s2);
+		ft_free(s1, s2, f);
 		return (NULL);
 	}
 	n[i + j] = 0;
@@ -36,7 +43,6 @@ char	*ft_joinfree(char *s1, char *s2)
 	i = -1;
 	while (s2[++i] != 0)
 		n[i + j] = s2[i];
-	free(s1);
-	free(s2);
+	ft_free(s1, s2, f);
 	return (n);
 }

@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libpt.h                                            :+:      :+:    :+:   */
+/*   ft_is_in.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/26 15:26:40 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/29 18:12:17 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/06/01 18:46:12 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/06/01 19:48:45 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBPT_H
-# define LIBPT_H
+#include "../libft.h"
 
-# include "../libft.h"
-
-/*
-**			-----structure point-----
-*/
-typedef struct	s_pt
+char	ft_is_in(void *content, char size_of, void **tab, size_t size)
 {
-	char			*name;
-	int				x;
-	int				y;
-	int				z;
-}				t_pt;
+	size_t	i;
 
-t_pt			*ft_ptnew(char *name, int x, int y, int z);
-void			ft_ptdel(t_pt **pt);
-
-#endif
+	i = -1;
+	while (++i < size)
+		if (!ft_memcmp(content, tab[i], size_of))
+			return (1);
+	return (0);
+}
