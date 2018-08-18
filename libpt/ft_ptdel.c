@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 18:12:39 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/08/18 14:06:44 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/08/18 14:57:58 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ void	ft_ptdel(t_pt **pt)
 	(*pt)->y = 0;
 	(*pt)->z = 0;
 	free(*pt);
-	*pt 	= NULL;
+	*pt = NULL;
 }
