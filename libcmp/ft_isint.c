@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfindcont.c                                   :+:      :+:    :+:   */
+/*   ft_isint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/20 18:12:10 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/10/14 17:36:14 by awajsbro         ###   ########.fr       */
+/*   Created: 2018/10/16 15:02:20 by awajsbro          #+#    #+#             */
+/*   Updated: 2018/10/16 16:04:21 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "liblst.h"
+#include "../libft.h"
 
-char	ft_lstfindcont(t_list **lst, void *content)
+char	ft_isint(char *s)
 {
-	char r;
+	int		i;
+	long	n;
 
-	(*lst) = ft_lststart((*lst));
-	while ((r = ft_strequ((*lst)->content, content)) == 0
-		&& (*lst)->next != NULL)
-		(*lst) = (*lst)->next;
-	return (r);
+	if (s == NULL)
+		return (0);
+	if (*s == '-' || *s == '+')
+		i = 0;
+	else
+		i = -1;
+	if (ft_strlen(s) - i > 11)
+		return (0);
+	while (s[++i] != 0)
+		if (ft_isdigit(s[i]) == 0)
+			return (0);
+	n = ft_atoi(s);
+	if (n > INT32_MAX || n < INT32_MIN)
+		return (0);
+	return (1);
 }

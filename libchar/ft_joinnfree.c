@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/06 19:22:12 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/27 16:36:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/10/14 18:49:08 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void ft_free(char *s1, char *s2, char f)
+static void	ft_free(char *s1, char *s2, char f)
 {
 	if (f == 1 || f == 3)
 		free(s1);
@@ -20,7 +20,7 @@ static void ft_free(char *s1, char *s2, char f)
 		free(s2);
 }
 
-char	*ft_joinnfree(char *s1, char *s2, char f)
+char		*ft_joinnfree(char *s1, char *s2, char f)
 {
 	char	*n;
 	size_t	i;

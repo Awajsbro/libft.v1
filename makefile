@@ -6,7 +6,7 @@
 #    By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/17 15:40:35 by awajsbro          #+#    #+#              #
-#    Updated: 2018/06/01 19:48:12 by awajsbro         ###   ########.fr        #
+#    Updated: 2018/10/16 15:12:04 by awajsbro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRCMATH	=	libmath/ft_strlen.c \
 
 SRCCMP	=	libcmp/ft_isascii.c \
 			libcmp/ft_isdigit.c \
+			libcmp/ft_isint.c \
 			libcmp/ft_isprint.c \
 			libcmp/ft_isalnum.c \
 			libcmp/ft_isalpha.c \

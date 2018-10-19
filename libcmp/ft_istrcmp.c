@@ -6,13 +6,13 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 16:54:49 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/05/22 11:59:51 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/10/14 17:52:59 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static long long	find_ABS_val(char *s)
+static long long	find_abs_val(char *s)
 {
 	long long	i;
 
@@ -31,8 +31,8 @@ char				ft_istrcmp(char *n1, char *n2)
 
 	if (n1 == NULL || n2 == NULL || !(ft_strdigit(n1)) || !(ft_strdigit(n2)))
 		return (-42);
-	i = find_ABS_val(n1);
-	j = find_ABS_val(n2);
+	i = find_abs_val(n1);
+	j = find_abs_val(n2);
 	if (((n1[0] == '-' && n1[i] != 0) || (n2[0] == '-' && n2[j] != 0))
 		&& (n1[0] != '-' || n2[0] != '-'))
 		return (n1[0] == '-' ? -1 : 1);

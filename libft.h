@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/06/01 19:46:52 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/10/16 15:12:33 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char			ft_isascii(int c);
 char			ft_isdigit(int c);
 char			ft_isprint(int c);
 char			ft_isspace(int c);
+char			ft_isint(char *s);
 char			ft_strdigit(char *s);
 char			ft_strequ(char const *s1, char const *s2);
 char			ft_strnequ(char const *s1, char const *s2, size_t n);
