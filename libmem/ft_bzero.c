@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 19:07:24 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/03/26 16:22:12 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/11/15 11:29:18 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	if (s == NULL)
+		return ;
 	while (n--)
 		((unsigned char*)s)[n] = 0;
 	((unsigned char*)s)[0] = 0;

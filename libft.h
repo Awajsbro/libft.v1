@@ -6,7 +6,7 @@
 /*   By: awajsbro <awajsbro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 17:30:03 by awajsbro          #+#    #+#             */
-/*   Updated: 2018/10/16 15:12:33 by awajsbro         ###   ########.fr       */
+/*   Updated: 2018/10/29 13:26:23 by awajsbro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@
 # include "libwr/ft_printf/ft_printf.h"
 # include "liblst/liblst.h"
 # include "libpt/libpt.h"
-# include "non_tes_serieux/libnimp.h"
 
 typedef unsigned long long t_ull;
 
